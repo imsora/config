@@ -1,4 +1,5 @@
 DISABLE_MAGIC_FUNCTIONS=true
+ZSH_DISABLE_COMPFIX=true
 
 #If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -103,10 +104,15 @@ source $ZSH/oh-my-zsh.sh
 
 alias auth="kinit && mwinit"
 alias ssh-voltron="ssh manga-dbs-horizonte-zengsa-22-a-91b42bd7.us-west-2.amazon.com"
-alias ssh-dev="ssh dev-dsk-zengsa-1e-96cfe19b.us-east-1.amazon.com"
+alias ssh-dev="ssh zengsa.aka.corp.amazon.com"
 alias bb="brazil-build"
 alias bws="brazil ws"
 export PATH=$HOME/.toolbox/bin:$PATH
+alias brc=brazil-recursive-cmd
+alias bbb='brc --allPackages brazil-build'
+
 
 # export NVM_DIR=~/.nvm
 # source $(brew --prefix nvm)/nvm.sh
+# [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# export JAVA_TOOLS_OPTIONS="-Dlog4j2.formatMsgNoLookups=true"
